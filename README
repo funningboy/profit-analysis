@@ -35,4 +35,34 @@ we woudld leave the market at close price.
 
 
 results
-you can open "rep.csv" by excel/open-offic 
+you can open "rep.csv" by excel/open-offic
+
+or you can change our system define in "data.pl"
+
+default valus:
+	"LEAVE_PROFIT_LOST" => '10.0',          #出場停損 10%
+	"LEAVE_PROFIT_MAKE" => '7.0',           #出場獲利 7%
+	"KEEP_PROFIT_LOST"  => '5.0',           #持有時確保 損失 達 -5%,如超過則回補
+        "KEEP_PROFIT_MAKE"  => '3.0',           #持有時確保 獲利 達  3%,如操過則加碼   
+	"KEEP_PROFIT_LOST_T"=> '3',             #最多回補次數 3 次
+	"KEEP_PROFIT_MAKE_T"=> '3',             #最多加碼次數 3 次
+	"KEEP_PROFIT_LENGTH"=> '5',             #每5 天 check 損失/獲利
+	"PRICE_UP_LIMIT"    => '100',            #股價 < 100 的才會進場 check
+	"PRICE_DN_LIMIT"    => '10',            #股價 > 10  的才會進場 check
+
+to
+
+ my %data = (
+	"START_TIME"        => '2010/09/01',	#開始時間
+	"END_TIME"          => '2010/10/18',    #結束時間
+	"CAPITAL"           => '500000',        #成本
+	"LEAVE_PROFIT_LOST" => '10.0',          #出場停損 10%
+	"LEAVE_PROFIT_MAKE" => '7.0',           #出場獲利 7%
+	"KEEP_PROFIT_LOST"  => '5.0',           #持有時確保 損失 達 -5%,如超過則回補
+        "KEEP_PROFIT_MAKE"  => '3.0',           #持有時確保 獲利 達  3%,如操過則加碼   
+	"KEEP_PROFIT_LOST_T"=> '1',             #最多回補次數 3 次
+	"KEEP_PROFIT_MAKE_T"=> '1',             #最多加碼次數 3 次
+	"KEEP_PROFIT_LENGTH"=> '3',             #每5 天 check 損失/獲利
+	"PRICE_UP_LIMIT"    => '40',            #股價 < 100 的才會進場 check
+	"PRICE_DN_LIMIT"    => '10',            #股價 > 10  的才會進場 check
+);
