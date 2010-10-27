@@ -66,3 +66,10 @@ to
 	"PRICE_UP_LIMIT"    => '40',            #股價 < 100 的才會進場 check
 	"PRICE_DN_LIMIT"    => '10',            #股價 > 10  的才會進場 check
 );
+
+
+how to use 
+
+perl data.pl
+
+and you should know how to install the package from cpan.....
