@@ -1,0 +1,38 @@
+
+#==================================================
+author: sean chen mail: funningboy@gmail.com
+publish 2010/10/27
+License: BSD
+#==================================================
+
+hi all,
+
+this is a finance tool for profit analysis,
+you can define your entry point in it and you will get a sample report for "make or lost profits" based on our rules.
+
+what's the rules?
+
+1. entry points (buy)
+if you want to buy a ticket at 2010/10/10, 
+we will get the next bar open price at 2010/10/11 to our entry point,
+
+why? 
+because we are so confused the price at 2010/10/10, what's price we should get. high, low, open, close....
+so we used the "next bar entry rule" to avoid it.
+
+2. recalls (re-buy, re-sell) in hold position
+if the current price was fit our constrain, we would sell or buy it in close price.
+
+re-buy 
+2-1 
+what's "re-buy", "re-sell"?
+if the current profits is outoff our balance range, 
+we would try to re-buy/re-sell the tickets again, that can rebalance our profits
+
+3. leave points (sell)
+if the current profits is outoff our max make/lost range,
+we woudld leave the market at close price.
+
+
+results
+you can open "rep.csv" by excel/open-offic 
