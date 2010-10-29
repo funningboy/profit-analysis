@@ -144,6 +144,8 @@ sub check_file_format{
              
        } 
    }
+
+close(ifile);
 #printf Dumper(\%PROFIT::profit::INPUTList);
 #printf Dumper(\%PROFIT::profit::DATAList);
 #die
@@ -469,7 +471,7 @@ foreach my $mk ( sort {$a<=>$b} keys %lost_hs ){
     }
   }
 
-
+close(ofile);
 
 }
 
